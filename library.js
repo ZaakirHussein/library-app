@@ -25,14 +25,20 @@ overlayTrigger.addEventListener('click', closeForm);
 let myLibrary = [];
 let book = {};
 
-// Object Constructor
-function Book(title, author, pages, status) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.status = status; 
-}
-
+// Refactoring using classes to replace constructor
+class Book {
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
+    changeReadStatus() {
+      this.status = !this.status; 
+      updateLibrary()
+    }
+  
+};
 
 // Step 2: Add a function to the script (not the constructor) that can take user’s input and store the new book objects into an array. 
 
@@ -94,10 +100,8 @@ const displayBooks = (newBook) => {
     const statusColumn = rowContainer.appendChild(document.createElement('div'));
     addColumnClass(statusColumn);
     statusColumn.setAttribute('id', 'status-container');
-    statusColumn.addEventListener('click', () => { 
-      newBook.status = !newBook.status; 
-      updateLibrary();
-    });
+    statusColumn.addEventListener('click', () => newBook.changeReadStatus());
+
       if (newBook.status == false) {
         const statusToggle = statusColumn.appendChild(document.createElement('img'));
         statusToggle.src = 'images/xmark-solid.svg';
