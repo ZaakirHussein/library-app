@@ -63,8 +63,6 @@ const addBookToLibrary = (event) => {
   closeForm();
 };
 
-formInput.addEventListener("submit", validateForm);
-
 // Dynamic Table Headers
 const tableContainer = document.querySelector(".table-container");
 const authorHeader = document.getElementById("title-author");
@@ -184,3 +182,5 @@ const validateForm = (e) => {
     e.stopImmediatePropagation();
   }
 };
+
+formInput.addEventListener("submit", validateForm);
