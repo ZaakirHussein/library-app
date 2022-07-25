@@ -1,97 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
     <script src="library.js" defer></script>
     <title>Library App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="page-container">
-        <div class="top-header">
-            <img class="logo" src="images/tpl-logo-white.png" alt="tpl-logo">
-            <p class="top-text">Sign In</p>
-            <div class="account-container">
-                <img src="images/account-circle-outline.png" alt="acc-logo">
-                <p>Your Account</p>
-            </div>
-            <p class="top-text">Contact Us</p>
-            <div class="top-right">
-                <button>Donate Now</button>
-            </div>
+      <div class="top-header">
+        <img class="logo" src="images/tpl-logo-white.png" alt="tpl-logo" />
+        <p class="top-text">Sign In</p>
+        <div class="account-container">
+          <img src="images/account-circle-outline.png" alt="acc-logo" />
+          <p>Your Account</p>
         </div>
-        <div class="bottom-header">
-            <p class="first-p">Books, DVDS, & Music</p>
-            <p class="bottom-text">eBooks & Online Content</p>
-            <p class="bottom-text">Programs</p>
-            <p class="bottom-text">Locations</p>
-            <p class="last-p">Using the Library</p>
-            <div class="bottom-right">
-                <p class="bottom-text">Teens</p>
-                <p class="bottom-text">Kids</p>  
+        <p class="top-text">Contact Us</p>
+        <div class="top-right">
+          <button>Donate Now</button>
+        </div>
+      </div>
+      <div class="bottom-header">
+        <p class="first-p">Books, DVDS, & Music</p>
+        <p class="bottom-text">eBooks & Online Content</p>
+        <p class="bottom-text">Programs</p>
+        <p class="bottom-text">Locations</p>
+        <p class="last-p">Using the Library</p>
+        <div class="bottom-right">
+          <p class="bottom-text">Teens</p>
+          <p class="bottom-text">Kids</p>
+        </div>
+      </div>
+      <div class="searchbar-container">
+        <input
+          type="text"
+          placeholder="Search books, movies, branches, programs & more"
+        />
+        <button>Search</button>
+        <p>Advanced</p>
+      </div>
+      <div class="content">
+        <div class="banner">
+          <div class="table-container">
+            <div class="header-container">
+              <h2 class="banner-header">
+                Toronto Public Library: Virtual Bookshelf
+              </h2>
+              <button class="book-btn">
+                Add Book
+                <span class="sym-container">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </span>
+              </button>
             </div>
-        </div>
-        <div class="searchbar-container">
-            <input type="text" placeholder="Search books, movies, branches, programs & more">
-            <button>Search</button>
-            <p>Advanced</p>
-        </div>
-        <div class="content">
-            <div class="banner">
-                <div class="table-container">
-                    <div class="header-container">
-                        <h2 class="banner-header">Toronto Public Library: Virtual Bookshelf</h2>
-                        <button class="book-btn">
-                            Add Book
-                            <span class="sym-container">
-                                <i class="fa-solid fa-circle-plus"></i>
-                            </span>
-                    </button>
-                    </div>
-                    <div class="table-header">
-                        <span id="title-header">Title</span>
-                        <span id="title-author">Author</span>
-                        <span id="title-pages">Pages</span>
-                        <span id="title-status">Status</span>
-                        <span id="trashcan">Delete</span>
-                    </div>
-                </div>
+            <div class="table-header">
+              <span id="title-header">Title</span>
+              <span id="title-author">Author</span>
+              <span id="title-pages">Pages</span>
+              <span id="title-status">Status</span>
+              <span id="trashcan">Delete</span>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="form-container">
-        <div class="form-header">
-            <h2>Add a Book</h2>
-            <div class="close-symbol"><i class="fa-solid fa-circle-xmark"></i></div>
+      <div class="form-header">
+        <h2>Add a Book</h2>
+        <div class="close-symbol"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+      <form class="form-hidden">
+        <div class="form-hidden" id="required">
+          <label for="title">Book Title</label>
+          <input type="text" name="title" id="title" required />
+          <p class="help">Please enter the book's title.</p>
         </div>
-        <form class="form-hidden">
-            <div class="form-hidden" id="required">
-              <label for="title">Book Title</label>
-              <input type="text" name="title" id="title" required>
-            </div>
-            <div class="form-hidden" id="required">
-              <label for="author">Author</label>
-              <input type="text" name="author" id="author" required>
-            </div>
-            <div class="form-hidden" id="required">
-                <label for="pages">Total Pages</label>
-                <input type="number" name="pages" id="pages" required>
-            </div>
-            <div class="form-hidden" id="checkbox-container">
-                <input type="checkbox" name="read-status" id="read-status-info">
-                <span> <label for="read-status">I have read this book</label></span>
-            </div>
-            <div class="form-hidden">
-                <input type="submit" value="Submit">
-              </div>
-          </form>
-    </div>                     
+        <div class="form-hidden" id="required">
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author" required />
+          <p class="help">Please enter the book's author.</p>
+        </div>
+        <div class="form-hidden" id="required">
+          <label for="pages">Total Pages</label>
+          <input type="number" name="pages" id="pages" required />
+          <p class="help">Please enter the total amount of pages.</p>
+        </div>
+        <div class="form-hidden" id="checkbox-container">
+          <input type="checkbox" name="read-status" id="read-status-info" />
+          <span> <label for="read-status">I have read this book</label></span>
+        </div>
+        <div class="form-hidden">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
     <div id="overlay"></div>
-</body>
+  </body>
 </html>
